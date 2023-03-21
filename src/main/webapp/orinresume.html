@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		/*your CSS code here*/
+body{
+	margin-left: 20px;
+	background-color: #EBD4CB;
+	color: #B6465F;
+	font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h2{
+    text-decoration: underline;
+}
+
+p.profession{
+	font-size: large;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase; 
+}
+
+img{
+	border: 8px double #DA9F93;
+	
+	border-radius: 20px;
+
+	margin-left: 10px;
+}
+/*
+.titlecard{
+	float:right;
+}
+.clearing{
+	clear: both;
+}
+*/
+table {
+	border-collapse: collapse;
+	border: 3px double #FDFFFC;
+}
+
+table th, table td{
+	padding:5px;
+}
+
+a:hover {
+  	color: #2EC4B6;
+  	border: 1px solid white;
+}
+
+a:visited {
+  	color: #2C0703;
+}
+
+#skillprogress li{
+	display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+	margin-right: 50%;
+}
+
+#skillprogress li p{
+	width:10%;
+}
+
+#skillprogress li div{
+	background-color: #FDFFFC;
+	width: 80%;
+    height: 5px;
+    position: relative;
+    margin-left:20px;
+	margin-right: 20px;
+}
+
+#skillprogress li div span{
+	position: absolute;
+    height: 100%;   
+    background:#B6465F;
+    padding-right: 0%;
+}
+#skillprogress li:nth-child(1) div span{
+    padding-right: 90%;
+}
+#skillprogress li:nth-child(2) div span{
+    padding-right: 50%;
+}
+		
+	</style>
+	<head>
+        <title>Orin's Resume</title>
+	</head>
+	<body>
+		<h1><strong>Orin Tano</strong></h1>
+		<div>
+			<p class="profession">Full-stack Software Engineer</p>
+			<img src="https://photos1.blogger.com/blogger/5964/904/320/the_life_aquatic.jpg" alt="Dafoe" />
+			<hr>
+			<h2><b>Summary</b></h2>
+			<p> Hire me plez :)</p>
+		</div>
+		<hr>
+		<div >
+		<h2><b>Core Skills</b></h2>
+		<table border = "1">
+			<tr>
+				<th colspan="4">Core Skills</th>
+			</tr>
+			<tr>
+				<th>Languages</th>
+				<td>Java</td>
+				<td>HTML</td>
+				<td>C#</td>
+			</tr>
+		</table>
+		<ul id="skillprogress">
+			<caption>Skill Progress</caption>
+			<li>
+				<p>HTML</p>
+				<div><span></span></div>
+				<p>90%</p>
+			</li>
+			<li>
+				<p>CSS</p>
+				<div><span></span></div>
+				<p>50%</p>
+			</li>
+			
+		</ul>
+		</div>
+		<h2><b>Experience</b></h2>
+		<ul>
+			<li>
+				<p><b>Full-stack Engineer - UNSC</b> | 2022-Present</p>
+				<p>Developed commucation splicing systems for the capital cruiser</p>
+			</li>
+			<li>
+				<p><b>Coffee Maker - UNSC</b> | 2015-2022</p>
+				<p>A good ol'brew can persuade anyone given enough time</p>
+			</li>
+		</ul>
+		<h2><b>Showcase</b></h2>
+		<a href="https://assets.bonappetit.com/photos/6193ede07a4d50e6a32105fa/8:5/w_2999,h_1874,c_limit/French%20Dispatch_Lede_111_FD_SG_07227_Searchlight%20Pictures.jpg" target="_blank">My Infamous and Most Magnificent Coffee Break</a>
+		<p></p>
+		<a href="https://64.media.tumblr.com/053515492459469a219814120b26866a/tumblr_ov6660KmAT1tzpr0yo1_1280.jpg" target="_blank">My client when they try my coffee(We may be related)</a>
+		<h2>Write to me!</h2>
+		<form>
+    		<input placeholder="Name"/><br>
+    		<input placeholder="Email"/><br>
+			<textarea placeholder="Message" required ></textarea><br>
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>

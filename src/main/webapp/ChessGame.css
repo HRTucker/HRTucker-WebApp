@@ -1,0 +1,377 @@
+@charset "ISO-8859-1";
+
+:root{
+	--text-colour: white;
+	--primary-colour: #B6465F;
+	--secondary-colour: rgb(138, 53, 72);
+	--background-colour: #EBD4CB;
+	
+	
+}
+
+body{
+	background-color: var(--background-colour);
+	color: var(--primary-colour);
+	font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#main{
+	display: grid;
+	grid-template-columns: 850px 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#interface-section{
+	width:400px;
+	border: 5px solid var(--primary-colour);
+	border-radius: 5px;
+	position:relative;
+}
+
+#game-section{
+	background-color: var(--secondary-colour);
+}
+
+#board-section{
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	width: 850px;
+	height: 850px;
+    grid-template-columns: 30px 1fr;
+}
+
+#opponent-section{
+	background-color:blue;
+	height:30px;
+}
+
+#turnTimer-section{
+	color:white;
+	font-weight: bold;
+	
+	background-color:var(--primary-colour);
+	
+	position:absolute;
+	top: 40%;
+	
+	
+	height:160px;
+	width: 100%;
+}
+
+#turnTimer-section-opponent{
+	display:flex;
+	height:50%;
+	font-size: 30px;
+	
+	background-color:var(--secondary-colour);
+	
+}
+
+#turnTimer-section-client{
+	display:flex;
+	height:80px;
+	font-size: 30px;
+}
+
+.timerName{
+	margin:0px;
+	margin-top:20px;
+}
+
+.timerName p{
+	margin:0px;
+	padding:0px;
+	margin-top:0px
+} 
+
+.timer{
+	text-align: center;
+	font-size: 50px;
+	width:35%;
+	height:60px;
+	margin:7px;
+	background-color:var(--secondary-colour);
+	padding:0px;
+	border: 3px solid var(--primary-colour);
+	border-radius:10px;
+}
+
+.side-tag{
+	color: var(--text-colour);
+	text-align: center;
+	width:100%;
+	height:12.5%;
+	margin: 0px;
+	padding-top: 10px;
+	
+	font-size:24px;
+}
+
+.side-tag-col{
+	display: grid;
+	background-color: var(--primary-colour);
+	width: 30px;
+	height: 800px;
+	
+	border: 5px solid var(--primary-colour);
+	border-right: none;
+	border-radius: 5px 0px 0px 5px;
+	
+	padding: 0px;
+	margin-top: 0px;
+}
+
+.bottom-tag{
+	flex:1;
+	color: var(--text-colour);
+	text-align: center;
+	width:100px;
+	height:100%;
+	margin: 0px;
+	font-size:24px;
+	padding:0px;
+}
+.bottom-tag p{
+	margin:0px;
+}
+
+.bottom-tag-row{
+	display:flex;
+	background-color: var(--primary-colour);
+	width: 800px;
+	height: 30px;
+	
+	border: 5px solid var(--primary-colour);
+	border-right: none;
+	border-radius: 0px 0px 5px 5px;
+	
+	padding: 0px;
+	margin-top: 0px;
+	margin-left:35px;
+}
+
+.chess-tile-black{
+	background-image: url("https://media.discordapp.net/attachments/374624617651765248/1068584208672505966/BlackTile.png");
+	background-size: cover; 
+	image-rendering: pixelated;
+	width: 12.5%;
+	height: 100%;
+	
+}
+.chess-tile-white{
+	background-image: url("https://media.discordapp.net/attachments/374624617651765248/1068584270328758454/WhiteTile.png");
+	background-size: cover; 
+	image-rendering: pixelated;
+	width: 12.5%;
+	height: 100%;
+}
+.chess-board-container{
+	border: 5px solid var(--primary-colour);
+	border-radius: 0px 5px 0px 0px;
+	background-color: var(--primary-colour);
+	width: 800px;
+	height: 800px;
+	padding: 0px;
+	position: relative;
+}
+.chess-tile-row{
+	height: 12.5%;
+	display: flex;
+}
+
+.chess-tile-black:hover,.chess-tile-white:hover {
+	box-shadow: inset 5px 5px 5px #747474,inset -5px -5px 5px #747474;
+	text-align: center;
+}
+
+.chess-piece{
+	height:95%;
+	margin: 2.5%;
+	image-rendering: pixelated;
+}
+
+.chess-piece.hide{
+	
+}
+
+.chess-tile-black.selected, .chess-tile-white.selected  {
+	box-shadow: inset 5px 5px 5px blue,inset -5px -5px 5px blue;
+}
+
+.buttonStyle{
+	color: var(--text-colour);
+	background-color: var(--primary-colour);
+	font-weight: bold;
+	width: 100px;
+	height: 30px;
+	border: 2px solid var(--secondary-colour);
+	border-radius: 5px;
+	margin: 5px;
+}
+.buttonStyle:hover{
+	border-color:#cf8394;
+}
+
+.dialogue{
+	padding-top: 10%;
+	color: var(--text-colour);
+	text-align: center;
+}
+#clientInfo{
+		width: 100%;
+		font-weight: bold;
+		border-bottom: 5px solid var(--primary-colour);
+		background-color: var(--primary-colour);
+		color: var(--text-colour);
+}
+
+#clientInfo td:nth-child(1){
+	width:40%;
+}
+
+#checkmate-panel{
+	width: 50%;
+	font-weight: bold;
+	border-bottom: 5px solid var(--primary-colour);
+	background-color: var(--primary-colour);
+	color: var(--text-colour);
+	
+	font-size: 20px;
+	height: 40px;
+	padding-top: 10px;
+	
+	text-align: center;
+	text-align: bottom;
+	
+	visibility: hidden;
+	
+	position:absolute;
+	top:46.5%;
+	left:25%;
+	
+	border: 5px solid White;
+	border-left-color:#272727;
+	border-bottom-color:#272727;
+	border-radius: 5px;
+	
+}
+
+#checkmate-panel h3{
+	padding:0px;
+	margin:0px;
+}
+
+#searchMessage,#startBtn{
+	visibility: hidden;
+}
+#searchMessage.toggle,#startBtn.toggle,#checkmate-panel.toggle{
+	visibility: visible;
+}
+
+#chatbox{
+	position:absolute;
+	bottom:0px;
+	height:350px;
+	width:100%;
+}
+
+#promotion-menu{
+	visibility:hidden;
+	position:absolute;
+	display: flex;
+	height: 100px;
+	width: 400px;
+	
+	top:350px;
+	left:195px;
+	
+	background-color: var(--background-colour);
+	border: 5px solid var(--secondary-colour);
+	border-radius: 5px;
+}
+
+#promotion-menu.show{
+	visibility:visible
+}
+
+.picker-socket{
+	height: 80px;
+	width: 80px;
+	
+	background-color: var(--primary-colour);
+	border: 5px solid var(--primary-colour);	
+	
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.picker-socket:hover{
+	border: 5px solid var(--secondary-colour);
+}
+
+#board-cover{
+	visibility: hidden;
+	
+	position: absolute;
+	height:800px;
+	width:800px;
+	
+	background-color: #ffffff25;
+}
+#board-cover.activate{
+	visibility: visible;
+}
+
+.tab-button{
+	width:49.5%;
+	height: 44px;
+	margin: 0px;
+	
+	color: var(--text-colour);
+	background-color: var(--primary-colour);
+	font-weight: bold;
+	border: 3px solid var(--primary-colour);
+}
+
+.tab-button.unselected{
+	background-color: var(--secondary-colour);
+	border: 3px solid var(--secondary-colour);
+}
+
+.tab-button.unselected:hover{
+	background-color: var(--primary-colour);
+}
+
+.tab-button:hover{
+	background-color: var(--secondary-colour);
+}
+
+.tab-row{
+	
+}
+
+.tab-element{
+	width: 400px;
+	height:400px;
+	
+	padding:0%;
+	border: 5px solid var(--secondary-colour);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.tab-content{
+	display:block;
+	width:100%;
+	height:350px;
+	
+	padding-top: 50px;
+}
+
+.tab-content.unselected{
+	display: none;
+}

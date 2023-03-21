@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<style>
+	.mainStyle{
+		width: 674px;
+		background-color:#da59d4; 
+		margin:0px; 
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+		background-image: url(https://media.discordapp.net/attachments/374624617651765248/1056094657962057738/LongGradient.png);
+	}	
+	
+	.descriptionTable {
+		text-align: left;
+		width: 654px;
+		margin: 10px;
+		border-collapse: collapse;
+		color: white;
+		font-size: 15px;
+	}
+	
+	#mainTable {
+		text-align: left;
+		width: 95%;
+		margin: 10px;
+		border-collapse: collapse;
+		color: white;
+		font-size: 15px;
+	}
+		
+	tr:nth-child(1){
+		background-color:#00000040;
+		text-align:left;
+	}
+	
+	tr:nth-child(2){
+		background-color:#00000025;
+		text-align:left;
+		padding:0px;
+	}
+	
+	th{
+		padding:5px;
+		text-shadow: 0px 0px 3px white;
+	}
+	
+	td{
+		padding:0px;
+		padding-left:10px;
+	}
+	
+	.mainTable td{
+		line-height:0.8;
+	}
+	
+	.asideTable{
+		text-align:center; 
+		color:white; 
+		width:90%; 
+		margin:10px; 
+		border-collapse: collapse; 
+		font-size: 15px;
+	}
+	
+	.asideTable tr{
+		text-align:center;
+	}
+	
+	.asideTable img{
+		width:40%;
+		margin:0px;
+		padding:0px;
+	}
+	
+	img{
+		filter: drop-shadow(0px 0px 3px white);
+	}
+	
+	
+</style>
+
+<script type="text/javascript">
+	let glowVal = 0;
+	let reverse = false;
+
+	function glowAnim(){
+		let icon = document.getElementsByTagName("img");
+		//icon.style.filter = "drop-shadow(0px 10px 3px orange)";
+		
+		if(glowVal >= 7){
+			reverse = true;
+			//console.log("backward glow");
+		}else if(glowVal < 1.5){
+			reverse = false;
+			//console.log("forward glow");
+		}
+		if (reverse == true){
+				glowVal-=0.03;
+				//console.log("decrementing glow");
+		}else if(reverse == false){
+				glowVal+=0.03;
+				//console.log("incrementing glow");
+		}
+		//console.log("drop-shadow(0px 0px " + glowVal + "px white)");
+		for(let i = 0; i < icon.length;i++){
+			icon[i].style.filter = "drop-shadow(0px 0px " + glowVal + "px white)";
+		}
+	}
+	onload = function(){
+		setInterval(glowAnim,10);
+	}
+	
+</script>
+
+<body>
+	<section class="mainStyle">
+	    <section style="width: 100%; background-color:#00000040; margin:0px;">
+	        <img id="icon" style="width:20%; padding-top:5px; padding-bottom:0px;" src="https://media.discordapp.net/attachments/374624617651765248/1055845414676475964/Logo_001.png" alt="">
+	    </section>
+	    <section style="width: 100%; margin:0px; padding: 0px; padding-top:10px;">
+	        <table class="descriptionTable">
+	                <tr>
+	                    <th>DESCRIPTION</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <p>Very Nice!</p>
+	                    </td>
+	                </tr>
+	            </table>
+	    </section>
+	
+	    <section style="width: 100%; margin:0px; padding: 0px; display:flex ">
+	        <section style="width: 100%; margin:0px; padding: 0px; flex:4" > 
+	            <table id="mainTable">
+	                <tr>
+	                    <th>ITEMS INCLUDED</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                        <p>BACON BITS</p>
+	                    </td>
+	                </tr>
+	            </table>
+	        </section>
+	        <section style="width: 100%; margin:0px; padding: 0px; flex: 2">
+	            <table class="asideTable">
+	                <tr>
+	                    <th>UK SELLER</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <img src="https://media.discordapp.net/attachments/374624617651765248/1055845053634969700/Tick_001.png" alt="">
+	                    </td>
+	                </tr>
+	            </table>
+	            <table class="asideTable">
+	                <tr>
+	                    <th>UK SELLER</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <img width="25%" src="https://media.discordapp.net/attachments/374624617651765248/1055845053634969700/Tick_001.png" alt="">
+	                    </td>
+	                </tr>
+	            </table>
+	            <table class="asideTable">
+	                <tr>
+	                    <th>UK SELLER</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <img width="25%" src="https://media.discordapp.net/attachments/374624617651765248/1055845053634969700/Tick_001.png" alt="">
+	                    </td>
+	                </tr>
+	            </table>
+	        </section>
+	    </section>
+	
+	    <section style="width: 100%; margin:0px; padding: 0px; padding-bottom:15px;">
+	        <table class="descriptionTable">
+	                <tr>
+	                    <th>IMPORTANT</th>
+	                </tr>
+	                <tr>
+	                    <td>
+	                        <p>Very nice!</p>
+	                    </td>
+	                </tr>
+	            </table>
+	    </section>
+	</section>
+</body>
+</html>

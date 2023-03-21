@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+body{
+	padding:0px;
+	margin:0px;
+	text-align: center;
+	background-color: #EBD4CB;
+	color: #B6465F;
+	font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#ChatContainer{
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	height: 600px;
+	border: 3px solid #B6465F;
+	border-radius: 10px;
+}
+
+#ChatBox{
+	overflow-y:scroll;
+	background-color:white;
+	height:85%;
+	width:100%;
+	border-radius: 10px;
+}
+#ChatBox::-webkit-scrollbar {
+	background-color: #EBD4CB;
+	width: 10px;
+	height: 80%;
+}
+#ChatBox::-webkit-scrollbar-thumb {
+	background-color: #B6465F;
+	border-radius: 10px;
+	margin: 2px;
+	width: 80%;
+}
+
+#SendBox{
+	text-align: center;
+	display: flex;
+	width: 100%;
+	height: 10%;
+	margin: 5px;
+}
+#SendBox #messageInput{
+	flex: 8;
+	width: 80%;
+	height: 100%;
+	margin: 10px;
+	resize: none;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#SendBox #sendBtn {
+	flex: 2;
+	color: #EBD4CB;
+	background-color: #B6465F;
+	width: 90px;
+	height: 100%;
+	border: 2px solid #B6465F;
+	border-radius: 10px;
+	margin-top: auto;
+	margin-right: 10px;
+}
+
+#SendBox #sendBtn:hover{
+	border-color:#cf8394;
+}
+
+#localMsg{
+	margin-right: 10px;
+	text-align: right;
+	color: green;
+}
+#incomingMsg{
+	margin-left: 10px;
+	text-align: left;
+	color: blue;
+}
+
+#userInfoBox{
+	text-align: left;
+	padding: 10px;
+	position: fixed;
+	top: 30%;
+	left: 5%;
+	border: 3px solid #B6465F;
+	border-radius: 10px;
+	width: 20%;
+	background-color: white;
+}
+
+#loginBox{
+	display: none;
+	position: fixed;
+	background-color: #FFFFFF50;
+	color: blue;
+	text-align:center;
+	width:100%;
+	height:100%;
+	z-index: 10;
+}
+#main{
+	
+}

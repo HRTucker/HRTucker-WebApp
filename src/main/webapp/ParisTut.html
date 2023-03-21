@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html class="commonStyle">
+	<script type="text/javascript" src = "ParisTut.js"> </script>
+	<style>
+		strong, b, label, .title {
+			color: #9539ac;
+		}
+		
+		.title {
+			text-align: center;
+			font-size: 40px;
+			text-decoration: underline;
+			letter-spacing: 5px;
+			text-shadow: 3px 3px 0px rgb(168, 122, 165);
+		}
+		
+		.commonStyle {
+			background-color: #191a1d;
+			color: rgb(255, 255, 255);
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+		
+		footer {
+			color: #ff0000;
+		}
+		
+		label {
+			font-weight: 700;
+		}
+		
+		img {
+			text-align: center;
+			border: 5px outset #9539ac;
+			margin: 5px;
+		}
+		
+		img:hover {
+			border: 10px double #9539ac;
+		}
+		
+		#landing {
+			width: 95%;
+			margin: 2.5%;
+			margin-bottom: 0%;
+		}
+		
+		#transportinfo {
+			text-align: left;
+			width: 95%;
+			margin: 2.5%;
+			margin-bottom: 0%;
+		}
+		
+		#pricetable {
+			border-collapse: collapse;
+			border-radius: 5px;
+			border-style: double;
+			border-color: #9539ac;
+			width: 100%;
+		}
+		
+		#pricetable th {
+			background-color: #9539ac75;
+		}
+		
+		#pricetable tr {
+			text-align: center;
+			background-color: #9539ac2f;
+		}
+		
+		#pricetable td:nth-child(2) {
+			background-color: #69317752;
+		}
+		
+		#ticketbox {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			box-align: center;
+			border: 3px double #9539ac;
+			border-radius: 10px;
+			padding: 10px 10px 10px 10px;
+			width: 100%;
+			height: 100px;
+			box-sizing: border-box;
+			background-color: #3d1946;
+		}
+		
+		#ticketbox table{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#ticketbox input[type="button"] {
+			background-color: #9539ac;
+			border-color: #975fa5;
+			border-radius: 5px;
+			color: white;
+		}
+		
+		ul {
+			text-align: left;
+			padding-left: 50px;
+			list-style: circle inside none;
+		}
+		
+		aside {
+			text-align: center;
+			width: 100%;
+			border: 5px double #9539ac;
+			box-align: center;
+			flex: 1;
+		}
+		
+		main {
+			text-align: center;
+			display: flex;
+		}
+		
+		main div {
+			border: 5px double #9539ac;
+			border-right: none;
+			flex: 4;
+		}
+		
+		html {
+			margin-bottom: 200px;
+		}
+</style>
+	
+    <title>Nach Paris</title>
+    <header>
+        <p>&copy;Orin's Urlaub</p>
+        <h1 class="title">The Eiffel Tower</h1>
+    </header>
+    <body>
+        <main>
+            <div>
+                <section id="landing">
+                    <hr width="75%">
+                    <a href="https://mymodernmet.com/wp/wp-content/uploads/2017/11/wes-anderson-real-life-paris-9.jpg" target="_blank">
+                    <img src="https://mymodernmet.com/wp/wp-content/uploads/2017/11/wes-anderson-real-life-paris-9.jpg" width="75%" alt="The majestic tower looms above the vibrant streets of paris.">
+                    </a>
+
+                    <hr width="75%">
+
+                    <p>The <strong>Eiffel Tower</strong> is a wrought-iron tower that stands <strong>1,063 ft</strong> (<strong>324 m</strong>) tall in <strong>Paris</strong>. </p>
+
+                    <p>Currently, the <strong>Eiffel Tower</strong> is the most-visited monument in the world with over <strong>7 million</strong> visitors a year. </p>
+
+                    <p>Visitors can choose to go up using the Tower lift or the stairs. There are <strong>1,665 steps</strong> to the top.</p>
+
+                    <hr width="75%">
+                </section>
+                <section id="transportinfo">
+                    <h2 align="left"><b>Public Transport</b></h2>
+                    <ul>
+                        <li><b>Buses:</b> 42,69,72,82 and 87.</li>
+                        <li><b>Metro lines:</b> Trocadero, Ecole militaire.</li>
+						<li><b>Train lines:</b> Champ de Mars - Tour Eiffel, line C.</li>
+                    </ul>
+                    <h3 align="left"><b>Prices:</b></h3>
+                    <table id="pricetable">
+                        <tr>
+                            <th>Ticket Type</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Adults</td>
+                            <td>&#163;12</td>
+                        </tr>
+                        <tr>
+                            <td>Children</td>
+                            <td>&#163;5</td>
+                        </tr>
+                    </table>
+                </section>
+                <br>
+                <section id="ticketbox" >
+                    <table>
+                        <tr>
+                            <td><label for="adults">Adults:</label></td>
+                            <td><input type="number" id="adultTickets" placeholder="0" value=null></td>
+                        </tr>
+                        <tr>
+                            <td><label for="children">Children:</label></td>
+                            <td><input type="number" id="childTickets"  placeholder="0" value=null></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><input type="button" id="buyButton" value="Book Tickets"></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <aside>
+                <img src="https://preview.redd.it/wthb6ejmcol11.jpg?width=640&crop=smart&auto=webp&s=f7c68ff9fe168c50eacd8b517a9c9e032de07d71" alt="" width=50%>
+            </aside>
+        </main>
+    </body>
+    <footer>
+        <hr width="75%">
+        <a href="https://www.google.com" target="_blank">Google</a>
+    </footer>
+</html>
