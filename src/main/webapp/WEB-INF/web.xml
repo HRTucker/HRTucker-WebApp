@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
- 
-  <display-name>BasicWebApp</display-name>
-  
-  
+  <display-name>OrinsAbyss</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -12,47 +9,38 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-  <servlet>  
-  	<servlet-name>TestServlet</servlet-name>  
-  	<servlet-class>TestServlet</servlet-class>  
-  </servlet>  
-
   <servlet>
-  	<servlet-name>ChatRoomServlet</servlet-name>  
-  	<servlet-class>ChatRoomServlet</servlet-class> 
-  	<async-supported>true</async-supported>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>TestServlet</servlet-class>
   </servlet>
-
-  <servlet-mapping>  
-  	<servlet-name>TestServlet</servlet-name>  
-  	<url-pattern>/TestServlet</url-pattern>  
-  </servlet-mapping>   
-  <servlet-mapping>  
-  	<servlet-name>GameServlet</servlet-name>  
-  	<url-pattern>/GameServlet</url-pattern>  
-  </servlet-mapping>  
-  <servlet-mapping>  
-  	<servlet-name>ChatRoomServlet</servlet-name>  
-  	<url-pattern>/ChatRoomServlet</url-pattern>  
+  <servlet>
+    <servlet-name>ChatRoomServlet</servlet-name>
+    <servlet-class>ChatRoomServlet</servlet-class>
+    <async-supported>true</async-supported>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>  
-  	<servlet-name>ChessTimerUpdateServlet</servlet-name>  
-  	<url-pattern>/ChessTimerUpdate</url-pattern>  
+  <servlet-mapping>
+    <servlet-name>GameServlet</servlet-name>
+    <url-pattern>/GameServlet</url-pattern>
   </servlet-mapping>
-  
-  
-  
+  <servlet-mapping>
+    <servlet-name>ChatRoomServlet</servlet-name>
+    <url-pattern>/ChatRoomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChessTimerUpdateServlet</servlet-name>
+    <url-pattern>/ChessTimerUpdate</url-pattern>
+  </servlet-mapping>
   <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>Secure Pages</web-resource-name>
-            <url-pattern>/BasicWebApp/*</url-pattern>
-        </web-resource-collection>
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
-    </security-constraint>
-  
+    <web-resource-collection>
+      <web-resource-name>Secure Pages</web-resource-name>
+      <url-pattern>/BasicWebApp/*</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
 </web-app>
-
-
