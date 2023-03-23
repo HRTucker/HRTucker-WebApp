@@ -1,5 +1,5 @@
 # HRTucker-WebApp
-Java Servlet Web Application that both allowed me to understand server-client relations but also provided an environment for me to test and learn Java, HTML, CSS, JavaScript and JSPs
+<p>Java Servlet Web Application that both allowed me to understand server-client relations but also provided an environment for me to test and learn Java, HTML, CSS, JavaScript and JSPs</p>
 
 <h3>Here's a priview of my Chess Game:</h3>
 <p>All pixel art is my own :)</p>
