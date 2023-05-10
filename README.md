@@ -3,6 +3,6 @@
 
 <h3>Here's a priview of my Chess Game:</h3>
 <p>All pixel art is my own :)</p>
-<img src="https://gyazo.com/50c154e0b3aeb0fd4ffb60b998ade9aa.png"/>
+<img src="https://gyazo.com/50c154e0b3aeb0fd4ffb60b998ade9aa.png" alt="UI Example"/>
 
 <h4> can you see the free rook for white? hehe <h4>
